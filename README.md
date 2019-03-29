@@ -13,11 +13,11 @@ DataFrame Head: This shows the top five rows of our dataframe. Author is our Tar
 
 This graph shows the number of works per author our dataset had:
 
-![image of graph of work counts per author](/Screen Shot 2019-03-29 at 1.11.14 PM.png)
+![image of graph of work counts per author](/Screen%20Shot%202019-03-29%20at%201.11.14%20PM.png)
 
 This graph shows the word count (in millions) per author our dataset had: 
 
-![image of graph of word counts per author](/Screen Shot 2019-03-29 at 1.10.31 PM.png)
+![image of graph of word counts per author](/Screen%20Shot%202019-03-29%20at%201.10.31%20PM.png)
 
 ## Cleaning Up the Data
 After EDA, we cleaned up our data. We created a class that read in our data and did pre processing and cleaning automatically. It got rid of all punctuation and made everything lowercase. Then it tokenized all of the text and removed all common English stop words. It then lemmatized the text and added it to a single dataframe that was exported to a csv for easy sharing and importing into other notebooks.
@@ -25,9 +25,9 @@ After EDA, we cleaned up our data. We created a class that read in our data and 
 ## Data Analysis
 Our best model had a testing F-1 score of 1.0 and a cross validation score of .93 across 5 folds.
 
-![image of best model outcomes](/Screen Shot 2019-03-29 at 1.12.01 PM.png)
+![image of best model outcomes](/Screen%20Shot%202019-03-29%20at%201.12.01%20PM.png)
 
-![image of AOC of best model](/Screen Shot 2019-03-29 at 1.12.24 PM.png)
+![image of AOC of best model](/Screen%20Shot%202019-03-29%20at%201.12.24%20PM.png)
 
 ## Model Results
 We made multiple models with multiple parameters to get the best model possible. After multiple models and hyper parameter tuning we found that SGD-R tuned TF and ______ worked best. Our model predicts with nearly ~93% accuracy. Given that this is a multiclass classification model based on text data, this is beyond excellent. Here is a basic picture of all our models and their accuracy scores. 
