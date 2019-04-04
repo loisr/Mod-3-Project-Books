@@ -3,9 +3,9 @@
 # Predicting Authors of Books
 
 ## Motivation
-We wanted to see if we could predict an author of a book by it’s text using NLP and Machine Learning. Our goal was to create a model that we could input a book (or a chapter, sentence or even word) to predict the author.  If a model like this has enugh data, it could be used to guess ghost writters of a book, or guess pen names of well known authors who write other books on the side.
+We wanted to see if we could predict an author of a book by it’s text using NLP and Machine Learning. Our goal was to create a model that we could input a book (or smaller passages) to predict the author.  We are hopeful that given enough data a more expansive version of this model could be used in plagarism detection and aid in the identification of unidentified texts.
 ## Sources
-We took txt files of books from http://textfiles.com/etext/AUTHORS/ and Project Gutenberg. We wanted to make sure that all of the books that we used were part of the public domain, so no modern authors were included. We looked at 239 books from 16 different authors. We also didn't want to try to deal with differences in translations, so we only chose authors who wrote in English.
+We took .txt files of books from http://textfiles.com/etext/AUTHORS/ and Project Gutenberg. We wanted to make sure that all of the books that we used were part of the public domain, so no modern authors were included. We looked at 239 books from 16 different authors. We anticipated that translations of books would not be a reliable input as there could potentially be significant differences in vocabulary between different translators, so we excluded foreign authors from our data collection.
 ## Exploratory Data Analysis of our DataFrame
 DataFrame Head: This shows the top five rows of our dataframe. Author is our Target (y) variable while text is our independent variable: 
 
@@ -20,17 +20,17 @@ This graph shows the word count (in millions) per author our dataset had:
 ![image of graph of word counts per author](/Screen%20Shot%202019-03-29%20at%201.10.31%20PM.png)
 
 ## Cleaning Up the Data
-After EDA, we cleaned up our data. We created a class that read in our data and did pre processing and cleaning automatically. It got rid of all punctuation and made everything lowercase. Then it tokenized all of the text and removed all common English stop words. It then lemmatized the text and added it to a single dataframe that was exported to a csv for easy sharing and importing into other notebooks.
+After EDA, we cleaned up our data. We created a class that read, pre-processed, and cleaned our data automatically. Our pre-processing included removing capitalization and punctuation prior to tokenization, as well as the removal of stop words. The class then tokenized and lemmatized the text and returned it as a dataframe along with the target author lifted from the file path.
 
 ## Data Analysis
-Our best model had a testing F-1 score of 1.0 and a cross validation score of .93 across 5 folds.
+Our best performing model had a testing F-1 score of 1.0 and a cross validation score of .93 across 5 folds.
 
 ![image of best model outcomes](/Screen%20Shot%202019-03-29%20at%201.12.01%20PM.png)
 
 ![image of AOC of best model](/Screen%20Shot%202019-03-29%20at%201.12.24%20PM.png)
 
 ## Model Results
-We made multiple models with multiple parameters to get the best model possible. After multiple models and hyper parameter tuning we found that SGD-R tuned TF and ______ worked best. Our model predicts with nearly ~93% accuracy. Given that this is a multiclass classification model based on text data, this is beyond excellent. Here is a basic picture of all our models and their accuracy scores. 
+We made multiple models with multiple parameters to get the best model possible. After multiple models and hyper parameter tuning we found that atuned SGDC-Regression model worked best. Our model predicts with approximately 93% accuracy. Given that this is a multiclass classification model based on text data, this is beyond excellent. Here is a basic picture of all our models and their accuracy scores. 
 
 ## Frameworks / Libraries Used:
 - Sklearn
