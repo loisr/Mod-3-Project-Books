@@ -30,7 +30,7 @@ Our best performing model had a testing F-1 score of 1.0 and a cross validation 
 ![image of AOC of best model](/Screen%20Shot%202019-03-29%20at%201.12.24%20PM.png)
 
 ## Model Results
-We made multiple models with multiple parameters to get the best model possible. After multiple models and hyper parameter tuning we found that atuned SGDC-Regression model worked best. Our model predicts with approximately 93% accuracy. Given that this is a multiclass classification model based on text data, this is beyond excellent. Here is a basic picture of all our models and their accuracy scores. 
+We made multiple models with multiple parameters to get the best model possible. After multiple models and hyper parameter tuning we found that atuned SGDC-Regression model worked best. Our model predicts with approximately 93% accuracy. Given that this is a multiclass classification model based on text data, this is beyond excellent. 
 
 ## Frameworks / Libraries Used:
 - Sklearn
